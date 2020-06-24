@@ -98,7 +98,6 @@ button:focus {
   outline: none;
 }
 
-
 .Post {
   width: 14em;
   min-height: 8em;
@@ -146,7 +145,6 @@ button:focus {
 }
 
 .continue {
-  margin-left: 6em;
   height: 3em;
 }
 

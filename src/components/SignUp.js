@@ -60,7 +60,10 @@ function SignUp(props) {
                     onChange={e => setPassword(e.target.value)}
                     autoComplete="off"
                 />
-                <button className="button continue">Continue</button>
+                <div className="container">
+                    <button className="button continue">Continue</button>
+                </div>
+
             </form>
 
         </div >

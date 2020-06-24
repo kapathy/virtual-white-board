@@ -1,14 +1,18 @@
-import React, { useState, useContext } from 'react';
+import React, { useState, useContext, useEffect } from 'react';
 import { AuthContext } from "../Auth"
 import Board from './Board';
 import Header from './Header';
 
 function WhiteBoard(props) {
-    const [posts, setPosts] = useState([
-    ]);
+    const [posts, setPosts] = useState([]);
     const [value, setValue] = useState("");
 
     const { currentUser } = useContext(AuthContext);
+
+    useEffect(() => {
+        let message1 = "Why do JavaScript programmers wear glasses?";
+        addPost(message1);
+    }, []);
 
     const handleDeletePost = id => {
         console.log("delete");
@@ -30,11 +34,14 @@ function WhiteBoard(props) {
         setValue("");
     };
 
+
+
     if (currentUser != null) {
-        console.log("currentUser", currentUser.displayName);
+        const user = currentUser.displayName
+        console.log("currentUser", user);
         return (
             <div className="App">
-                <Header props={props} username={currentUser.displayName} />
+                <Header props={props} username={user} />
                 <form onSubmit={handleSubmit}>
                     <input
                         maxlength="280"
@@ -48,7 +55,7 @@ function WhiteBoard(props) {
                 <Board
                     posts={posts}
                     handleDeletePost={handleDeletePost}
-                    username={currentUser.displayName}
+                    username={user}
                 />
             </div>
         )
