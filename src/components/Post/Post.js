@@ -1,4 +1,5 @@
 import React from 'react';
+import './Post.css';
 
 
 export default function Post({
@@ -8,7 +9,7 @@ export default function Post({
     username
 }) {
     return (
-        <div className="Post" >
+        <div className="post" >
             <p className="message">{text}</p>
             <p className="username"> @{username}</p>
             <button className="delete" onClick={() => handleDeletePost(id)}> delete </button>

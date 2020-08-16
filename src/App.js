@@ -1,12 +1,11 @@
 import React from 'react';
+import './style.css';
 import { BrowserRouter as Router, Route } from 'react-router-dom'
-import WhiteBoard from './components/WhiteBoard';
-import Home from './components/Home';
-import SignIn from './components/SignIn';
-import SignUp from './components/SignUp';
-import './App.css';
-import { AuthProvider } from './Auth';
-
+import { AuthProvider } from './contexts/Auth';
+import WhiteBoard from './components/WhiteBoard/WhiteBoard';
+import Home from './components/Home/Home';
+import SignIn from './components/SignIn/SignIn';
+import SignUp from './components/SignUp/SignUp';
 
 function App() {
 

@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
-import firebase from '../config/firebase'
+import './SignUp.css';
+import firebase from '../../config/firebase'
 
 function SignUp(props) {
     const [firstname, setFirstname] = useState("");

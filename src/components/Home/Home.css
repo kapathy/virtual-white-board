@@ -1,0 +1,84 @@
+.homeOptions {
+  display: flex;
+  flex-direction: column;
+  width: 50em;
+  height: 30em;
+  margin: 5em auto 0 auto;
+  border: solid 0.1em #272727;
+  border-radius: 2em;
+}
+    
+.title {
+  margin: 1.5em 0 1em 0;
+}
+
+.signButton {
+  height: 3em;
+  margin: 1em 16em 0 16em;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 1em;
+  background: #A07178;
+  color: white;
+  border-radius: 5em;
+  cursor: pointer;
+  box-shadow: none;
+  border: solid 0.2em #A07178;
+}
+  
+.typewriter {
+  margin-top: 8em;
+}
+  
+.cursor {
+  animation:1s blink step-end infinite
+}
+  
+@keyframes blink {
+	from,
+	to {
+		color: transparent
+	}
+	50% {
+		color: #000
+	}
+}
+
+@-moz-keyframes blink {
+	from,
+	to {
+		color: transparent
+	}
+	50% {
+		color: #000
+	}
+}
+
+@-webkit-keyframes blink {
+	from,
+	to {
+		color: transparent
+	}
+	50% {
+		color: #000
+	}
+}
+
+@-ms-keyframes blink {
+	from,
+	to {
+		color: transparent
+	}
+	50% {
+		color: #000
+	}
+}
+
+@-o-keyframes blink {
+	from,
+	to {
+		color: transparent
+	}
+	50% {
+		color: #000
+	}
+}  

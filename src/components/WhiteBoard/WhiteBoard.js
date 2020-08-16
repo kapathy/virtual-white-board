@@ -1,7 +1,8 @@
-import React, { useState, useContext, useEffect } from 'react';
-import { AuthContext } from "../Auth"
-import Board from './Board';
-import Header from './Header';
+import React, { useState, useContext } from 'react';
+import './WhiteBoard.css';
+import { AuthContext } from "../../contexts/Auth"
+import Board from '../Board/Board';
+import Header from '../Header/Header';
 
 function WhiteBoard(props) {
     const [posts, setPosts] = useState([]);
@@ -9,20 +10,13 @@ function WhiteBoard(props) {
 
     const { currentUser } = useContext(AuthContext);
 
-    useEffect(() => {
-        let message1 = "Why do JavaScript programmers wear glasses?";
-        addPost(message1);
-    }, []);
-
     const handleDeletePost = id => {
-        console.log("delete");
         const newPosts = [...posts];
         newPosts.splice(id, 1);
         setPosts(newPosts);
     };
 
     const addPost = text => {
-        console.log("Add");
         const newPosts = [...posts, { text }];
         setPosts(newPosts);
     };
@@ -34,17 +28,14 @@ function WhiteBoard(props) {
         setValue("");
     };
 
-
-
-    if (currentUser != null) {
+    if (currentUser !== null) {
         const user = currentUser.displayName
-        console.log("currentUser", user);
         return (
             <div className="App">
                 <Header props={props} username={user} />
                 <form onSubmit={handleSubmit}>
                     <input
-                        maxlength="280"
+                        maxLength="280"
                         type="text"
                         className="input"
                         placeholder="write your message here..."
@@ -60,10 +51,10 @@ function WhiteBoard(props) {
             </div>
         )
     }
-
     return (
-        <div>Sign In to use the whiteboard!</div>
+        <div id="showMe">Sign In to use the whiteboard!</div>
     );
 }
+
 
 export default WhiteBoard;

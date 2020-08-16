@@ -1,5 +1,6 @@
 import React from 'react';
-import Post from './Post';
+import './Board.css';
+import Post from '../Post/Post';
 
 export default function Board({
     posts,
@@ -7,10 +8,11 @@ export default function Board({
     handleDeletePost
 }) {
     return (
-        <div className="Board">
-            {posts.map(post => (
+        <div className="board">
+            {posts.map((post, id) => (
                 <Post
                     key={post.id}
+                    id={id}
                     text={post.text}
                     handleDeletePost={handleDeletePost}
                     username={username}

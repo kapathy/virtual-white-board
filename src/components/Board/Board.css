@@ -1,0 +1,7 @@
+.board {
+    text-align: center;
+    display: flex;
+    flex-wrap: wrap;
+    margin: 0 6em 0 6em;
+  }
+  

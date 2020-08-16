@@ -1,0 +1,40 @@
+.post {
+	width: 14em;
+	min-height: 8em;
+	margin: 1em;
+	background-color: #A07178;
+	border-radius: 2em;
+	color: white;
+	position: relative;
+}
+
+.message {
+	text-align: left;
+	margin: 2em 1em 4em 1em;
+	line-height: 1.5em;
+	font-size: 0.95em;
+}
+
+.username {
+	position: absolute;
+	bottom: 0;
+	margin-left: 2em;
+	font-size: 0.8em;
+	font-style: italic;
+	font-weight: 200;
+}
+
+.delete {
+	position: absolute;
+	bottom: 0;
+	border: none;
+	background-color: white;
+	font-size: 0.8em;
+	font-family: 'Montserrat', sans-serif;
+	font-weight: 500;
+	cursor: pointer;
+	color: #A07178;
+	margin: 0 0 1em 1.6em;
+	border-radius: 5em;
+	width: 5em;
+}
