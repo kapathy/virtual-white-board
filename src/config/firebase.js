@@ -43,8 +43,8 @@ class Firebase {
         return this.auth.onAuthStateChanged(user);
     }
 
-    addPost(date, value, user) {
-        this.db.collection('posts').add({ date, value, user });
+    addPost(value, user) {
+        this.db.collection('posts').add({ value, user });
     }
 
     getDB() {

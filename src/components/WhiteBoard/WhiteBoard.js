@@ -1,8 +1,10 @@
-import React, { useState, useContext } from 'react';
+import React, { useState, useContext, useEffect } from 'react';
 import './WhiteBoard.css';
 import { AuthContext } from "../../contexts/Auth"
 import Board from '../Board/Board';
 import Header from '../Header/Header';
+import firebase from '../../config/firebase'
+
 
 function WhiteBoard(props) {
     const [posts, setPosts] = useState([]);
@@ -17,6 +19,8 @@ function WhiteBoard(props) {
     };
 
     const addPost = text => {
+        let user = currentUser.displayName;
+        firebase.addPost(text, user);
         const newPosts = [...posts, { text }];
         setPosts(newPosts);
     };
@@ -27,6 +31,7 @@ function WhiteBoard(props) {
         addPost(value);
         setValue("");
     };
+
 
     if (currentUser !== null) {
         const user = currentUser.displayName

@@ -16,6 +16,7 @@ function SignIn(props) {
 
     return (
         <div className="App">
+            <h1>Virtual Whiteboard</h1>
             <form className="signinForm" onSubmit={handleSignIn}>
                 <input
                     type="text"

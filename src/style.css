@@ -58,10 +58,10 @@ button:focus {
   margin-top: 1em;
   font-family: 'Montserrat', sans-serif;
   font-size: 0.9em;
-  background: #A07178;
+  background: #a3b2a5;
   color: white;
   border-radius: 5em;
   cursor: pointer;
   box-shadow: none;
-  border: solid 0.2em #A07178;
+  border: solid 0.2em #a3b2a5;
 }

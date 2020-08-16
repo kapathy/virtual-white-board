@@ -25,6 +25,7 @@ function SignUp(props) {
 
     return (
         <div className="App">
+            <h1>Virtual Whiteboard</h1>
             <form className="signupForm" onSubmit={handleSignUp}>
                 <input
                     type="text"

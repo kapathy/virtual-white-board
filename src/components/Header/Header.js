@@ -26,7 +26,7 @@ export default function Header({ props, username }) {
                 <div className="user" onClick={handleClick} >{username}</div>
                 <img className="usericon" src={UserIcon} alt="User Icon" />
             </div>
-            <div class="signoutContainer">
+            <div className="signoutContainer">
                 {clicked ? <button className="signout" onClick={handleSignOut}>Sign Out</button> : <div></div>}
             </div>
             <h1>Virtual Whiteboard</h1>
