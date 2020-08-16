@@ -1,35 +1,64 @@
 .header {
   display: inline-flex;
-  justify-content: space-between;
+  justify-content: flex-end;
   height: 3em;
   width: 100%;
   background-color: #272727;
 }
 
-.welcome {
+.user {
   height: 3em;
   line-height: 2.5em;
   margin-left: 1em;
   color: #A07178;
   font-size: 1.2em;
   font-weight: 400;
-}
+  text-transform: capitalize;
   
-.signout {
-  height: 3em;
-  line-height: 2.5em;
-  margin-right: 1em;
-  font-weight: 500;
-  color: #A07178;
-  font-size: 1.2em;
-  text-align: right;
-  text-transform: lowercase;
+}
+
+.user:hover {
+  text-decoration: underline;
   cursor: pointer;
 }
 
-.signout:hover {
-  text-decoration: underline;
+.signoutContainer{
+  display: flex;
+  height: 2em;
+  flex-direction: row-reverse;
 }
+  
+.signout {
+  font-size: 2em;
+  left: 88em;
+  width: 8em;
+  height: 6em;
+  cursor: pointer;
+  border: none;
+  margin-right: 1em;
+  border-radius: 0 0 2em 2em;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 1em;
+  background: #A07178;
+  color: white;
+  animation-name: grow;
+  animation-duration: 0.1s;
+
+}
+
+@keyframes grow {
+  0%   { height: 1em;}
+  25%  { height: 2em;}
+  50%  { height: 4em;}
+  75%  { height: 6em;}
+  100% { height: 6em;}
+}
+
+.usericon {
+  width: 1.5em;
+  margin: 0 1em 0 0.5em;
+}
+
   
 
   

@@ -1,8 +1,12 @@
-import React from 'react';
+import React, { useState } from 'react';
 import './Header.css';
-import firebase from '../../config/firebase'
+import firebase from '../../config/firebase';
+import UserIcon from '../../svgs/user.svg';
+
 
 export default function Header({ props, username }) {
+
+    const [clicked, setClicked] = useState(false);
 
     const handleSignOut = () => {
         firebase.signout()
@@ -12,11 +16,19 @@ export default function Header({ props, username }) {
             });
     };
 
+    const handleClick = () => {
+        { clicked ? setClicked(false) : setClicked(true) }
+        console.log(clicked);
+    }
+
     return (
         <div>
             <div className="header">
-                <div className="welcome"> Hello, {username}</div>
-                <div className="signout" onClick={handleSignOut}>Sign Out</div>
+                <div className="user" onClick={handleClick} >{username}</div>
+                <img className="usericon" src={UserIcon} alt="User Icon" />
+            </div>
+            <div class="signoutContainer">
+                {clicked ? <button className="signout" onClick={handleSignOut}>Sign Out</button> : <div></div>}
             </div>
             <h1>Virtual Whiteboard</h1>
         </div>
