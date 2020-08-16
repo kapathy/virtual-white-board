@@ -33,16 +33,19 @@ function WhiteBoard(props) {
         return (
             <div className="App">
                 <Header props={props} username={user} />
-                <form onSubmit={handleSubmit}>
-                    <input
-                        maxLength="280"
-                        type="text"
-                        className="input"
-                        placeholder="write your message here..."
-                        value={value}
-                        onChange={e => setValue(e.target.value)}
-                    />
-                </form>
+                <div className="inputContainer">
+                    <form onSubmit={handleSubmit}>
+                        <input
+                            maxLength="280"
+                            type="text"
+                            className="input"
+                            placeholder="write your message here..."
+                            value={value}
+                            onChange={e => setValue(e.target.value)}
+                        />
+                    </form>
+                    <button className="postButton" onClick={handleSubmit}>post</button>
+                </div>
                 <Board
                     posts={posts}
                     handleDeletePost={handleDeletePost}

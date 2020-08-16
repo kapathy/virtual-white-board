@@ -9,6 +9,8 @@ export default function Board({
 }) {
     return (
         <div className="board">
+
+
             {posts.map((post, id) => (
                 <Post
                     key={post.id}

@@ -1,3 +1,26 @@
+.inputContainer {
+  display: flex;
+  margin-left: auto;
+  margin-right: auto;
+  width: 31em;
+  justify-content: space-around;
+}
+
+.postButton {
+  height: 2.5em;
+  width: 5em;
+  text-transform: lowercase;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 0.8em;
+  font-weight: 300;
+  background: #A07178;
+  color: white;
+  border-radius: 2em;
+  cursor: pointer;
+  box-shadow: none;
+  border: solid 0.2em #A07178;
+}
+
 
 #showMe {
     animation: cssAnimation 0s 5s forwards;

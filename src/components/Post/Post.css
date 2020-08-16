@@ -1,40 +1,56 @@
 .post {
 	width: 14em;
-	min-height: 8em;
-	margin: 1em;
-	background-color: #A07178;
-	border-radius: 2em;
-	color: white;
-	position: relative;
+    min-height: 12em;
+    margin: 1em;
+    background-color: #A07178;
+    border-radius: 0.5em;
+    color: white;
+    position: relative;
 }
 
 .message {
+	color: black;
 	text-align: left;
 	margin: 2em 1em 4em 1em;
 	line-height: 1.5em;
 	font-size: 0.95em;
 }
 
-.username {
-	position: absolute;
-	bottom: 0;
-	margin-left: 2em;
-	font-size: 0.8em;
-	font-style: italic;
-	font-weight: 200;
-}
-
 .delete {
 	position: absolute;
-	bottom: 0;
-	border: none;
-	background-color: white;
-	font-size: 0.8em;
-	font-family: 'Montserrat', sans-serif;
-	font-weight: 500;
-	cursor: pointer;
+    top: 0;
+    border: none;
+    text-transform: uppercase;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 400;
+    cursor: pointer;
+    margin: 0 0 0 0;
+    border-radius: 5em;
+    right: 0;
+    margin-right: 0.3em;
+	margin-top: 0.3em;
 	color: #A07178;
-	margin: 0 0 1em 1.6em;
-	border-radius: 5em;
-	width: 5em;
+}
+
+.postInfo {
+	display: flex;
+    justify-content: space-between;
+    margin-top: 6em;
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+}
+
+.date {
+	font-size: 0.6em;
+    line-height: 2.5em;
+    margin-right: 1.5em;
+}
+
+.username {
+	margin-left: 1em;
+    font-size: 0.8em;
+    font-style: italic;
+    font-weight: 300;
+	text-transform: capitalize;
 }

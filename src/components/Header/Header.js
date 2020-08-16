@@ -18,7 +18,6 @@ export default function Header({ props, username }) {
 
     const handleClick = () => {
         { clicked ? setClicked(false) : setClicked(true) }
-        console.log(clicked);
     }
 
     return (
