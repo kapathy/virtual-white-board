@@ -1,7 +1,7 @@
 .board {
-    text-align: center;
-    display: flex;
-    flex-wrap: wrap;
-    margin: 0 7.5em 0 7.5em;
-  }
+  text-align: center;
+  display: flex;
+  flex-flow: row wrap;
+  margin: 0 7.5em 0 7.5em;
+}
   

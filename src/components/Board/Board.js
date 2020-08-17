@@ -4,7 +4,7 @@ import Post from '../Post/Post';
 
 export default function Board({
     posts,
-    handleDeletePost
+    handleDeletePost,
 }) {
     return (
         <div className="board">
@@ -15,6 +15,8 @@ export default function Board({
                     text={post.value}
                     handleDeletePost={handleDeletePost}
                     username={post.user}
+                    date={post.date}
+                    color={post.color}
                 />
             ))}
         </div>

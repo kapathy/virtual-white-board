@@ -15,6 +15,7 @@ body {
 h1 {
   font-size: 3em;
   font-weight: 400;
+  color: #404040;
 }
 
 form {
@@ -28,7 +29,7 @@ input {
   border-radius: 2em;
   border-style: none;
   padding-left: 1em;
-  border: solid 0.1em black;
+  border: solid 0.1em #404040;
   -webkit-appearance: none;
   box-shadow: none
 }

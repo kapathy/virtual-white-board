@@ -7,8 +7,13 @@ import Home from './components/Home/Home';
 import SignIn from './components/SignIn/SignIn';
 import SignUp from './components/SignUp/SignUp';
 
-function App() {
+/**
+* 
+*
+* 
+*/
 
+function App() {
   return (
     <AuthProvider>
       <Router>

@@ -4,11 +4,13 @@ import { AuthContext } from "../../contexts/Auth"
 import Board from '../Board/Board';
 import Header from '../Header/Header';
 import firebase from '../../config/firebase'
+import ColorPicker from '../ColorPicker/ColorPicker';
 
 function WhiteBoard(props) {
     const [posts, setPosts] = useState([]);
     const [value, setValue] = useState("");
     const { currentUser } = useContext(AuthContext);
+    const [color, setColor] = useState("#a3b2a5");
 
     useEffect(() => {
         firebase.db.collection('posts').onSnapshot((snapshot) => {
@@ -33,8 +35,14 @@ function WhiteBoard(props) {
         setPosts(newPosts);
     };
 
+    const getColor = (data) => {
+        setColor(data);
+        console.log(data);
+    };
+
     const addPost = text => {
-        firebase.addPost(new Date(), text, currentUser.displayName);
+        const date = new Date().toLocaleString();
+        firebase.addPost(date, text, currentUser.displayName, color);
         const newPosts = [...posts, { text }];
         setPosts(newPosts);
     };
@@ -45,7 +53,6 @@ function WhiteBoard(props) {
         addPost(value);
         setValue("");
     };
-
 
     if (currentUser !== null) {
         const user = currentUser.displayName
@@ -63,12 +70,16 @@ function WhiteBoard(props) {
                             onChange={e => setValue(e.target.value)}
                         />
                     </form>
+                </div>
+                <div className="inputContainer marginFix">
+                    <ColorPicker setPostColor={getColor} />
                     <button className="postButton" onClick={handleSubmit}>post</button>
                 </div>
                 <Board
                     posts={posts}
                     handleDeletePost={handleDeletePost}
                     username={user}
+                    color={color}
                 />
             </div>
         )
