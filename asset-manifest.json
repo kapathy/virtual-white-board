@@ -1,22 +1,22 @@
 {
   "files": {
-    "main.css": "./static/css/main.70a789fa.chunk.css",
-    "main.js": "./static/js/main.e59107e5.chunk.js",
-    "main.js.map": "./static/js/main.e59107e5.chunk.js.map",
-    "runtime-main.js": "./static/js/runtime-main.35a6c3e5.js",
-    "runtime-main.js.map": "./static/js/runtime-main.35a6c3e5.js.map",
-    "static/js/2.b9e6e0d9.chunk.js": "./static/js/2.b9e6e0d9.chunk.js",
-    "static/js/2.b9e6e0d9.chunk.js.map": "./static/js/2.b9e6e0d9.chunk.js.map",
-    "index.html": "./index.html",
-    "precache-manifest.185ea4cefcc68d6f6ca626d1103838e2.js": "./precache-manifest.185ea4cefcc68d6f6ca626d1103838e2.js",
-    "service-worker.js": "./service-worker.js",
-    "static/css/main.70a789fa.chunk.css.map": "./static/css/main.70a789fa.chunk.css.map",
-    "static/js/2.b9e6e0d9.chunk.js.LICENSE.txt": "./static/js/2.b9e6e0d9.chunk.js.LICENSE.txt",
-    "static/media/settings.svg": "./static/media/settings.5735b15d.svg",
-    "static/media/user.svg": "./static/media/user.adb77b20.svg"
+    "main.css": "/virtual-white-board/static/css/main.70a789fa.chunk.css",
+    "main.js": "/virtual-white-board/static/js/main.e59107e5.chunk.js",
+    "main.js.map": "/virtual-white-board/static/js/main.e59107e5.chunk.js.map",
+    "runtime-main.js": "/virtual-white-board/static/js/runtime-main.57b1cd9a.js",
+    "runtime-main.js.map": "/virtual-white-board/static/js/runtime-main.57b1cd9a.js.map",
+    "static/js/2.b9e6e0d9.chunk.js": "/virtual-white-board/static/js/2.b9e6e0d9.chunk.js",
+    "static/js/2.b9e6e0d9.chunk.js.map": "/virtual-white-board/static/js/2.b9e6e0d9.chunk.js.map",
+    "index.html": "/virtual-white-board/index.html",
+    "precache-manifest.ddd767b411685a808671b2342e9bf8e5.js": "/virtual-white-board/precache-manifest.ddd767b411685a808671b2342e9bf8e5.js",
+    "service-worker.js": "/virtual-white-board/service-worker.js",
+    "static/css/main.70a789fa.chunk.css.map": "/virtual-white-board/static/css/main.70a789fa.chunk.css.map",
+    "static/js/2.b9e6e0d9.chunk.js.LICENSE.txt": "/virtual-white-board/static/js/2.b9e6e0d9.chunk.js.LICENSE.txt",
+    "static/media/settings.svg": "/virtual-white-board/static/media/settings.5735b15d.svg",
+    "static/media/user.svg": "/virtual-white-board/static/media/user.adb77b20.svg"
   },
   "entrypoints": [
-    "static/js/runtime-main.35a6c3e5.js",
+    "static/js/runtime-main.57b1cd9a.js",
     "static/js/2.b9e6e0d9.chunk.js",
     "static/css/main.70a789fa.chunk.css",
     "static/js/main.e59107e5.chunk.js"
