@@ -1,6 +1,6 @@
 import React from 'react';
 import './style.css';
-import { BrowserRouter as Router, Route } from 'react-router-dom'
+import { HashRouter as Router, Route } from 'react-router-dom'
 import { AuthProvider } from './contexts/Auth';
 import WhiteBoard from './components/WhiteBoard/WhiteBoard';
 import Home from './components/Home/Home';
