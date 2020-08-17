@@ -6,7 +6,7 @@ export default function Post({
     id,
     text,
     handleDeletePost,
-    username
+    username,
 }) {
     return (
         <div className="post" >

@@ -5,22 +5,36 @@ import Board from '../Board/Board';
 import Header from '../Header/Header';
 import firebase from '../../config/firebase'
 
-
 function WhiteBoard(props) {
     const [posts, setPosts] = useState([]);
     const [value, setValue] = useState("");
-
     const { currentUser } = useContext(AuthContext);
 
-    const handleDeletePost = id => {
+    useEffect(() => {
+        firebase.db.collection('posts').onSnapshot((snapshot) => {
+            const newPosts = snapshot.docs.map((doc) => ({
+                id: doc.id,
+                ...doc.data()
+            }));
+            setPosts(newPosts);
+        })
+    }, [])
+
+    const handleDeletePost = (id) => {
+        const key = posts[id].id;
+        console.log(key);
+        firebase.db.collection("posts").doc(key).delete().then(function () {
+            console.log("Document successfully deleted!");
+        }).catch(function (error) {
+            console.error("Error removing document: ", error);
+        });
         const newPosts = [...posts];
         newPosts.splice(id, 1);
         setPosts(newPosts);
     };
 
     const addPost = text => {
-        let user = currentUser.displayName;
-        firebase.addPost(text, user);
+        firebase.addPost(new Date(), text, currentUser.displayName);
         const newPosts = [...posts, { text }];
         setPosts(newPosts);
     };

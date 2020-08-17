@@ -4,20 +4,17 @@ import Post from '../Post/Post';
 
 export default function Board({
     posts,
-    username,
     handleDeletePost
 }) {
     return (
         <div className="board">
-
-
             {posts.map((post, id) => (
                 <Post
                     key={post.id}
                     id={id}
-                    text={post.text}
+                    text={post.value}
                     handleDeletePost={handleDeletePost}
-                    username={username}
+                    username={post.user}
                 />
             ))}
         </div>

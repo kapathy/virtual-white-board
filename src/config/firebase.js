@@ -43,14 +43,10 @@ class Firebase {
         return this.auth.onAuthStateChanged(user);
     }
 
-    addPost(value, user) {
-        this.db.collection('posts').add({ value, user });
+    addPost(date, value, user) {
+        this.db.collection('posts').add({ date, value, user });
     }
 
-    getDB() {
-        return this.db.collection('posts')
-    }
 }
-
 
 export default new Firebase();
