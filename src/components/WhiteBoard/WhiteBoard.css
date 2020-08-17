@@ -35,5 +35,26 @@
 @keyframes cssAnimation {
   to   { visibility: visible; }
 }
+
+@media screen and (max-width: 500px) { 
+
+  .inputContainer {
+    width: 8em;
+    margin-top: 3em;
+  }
+
+  input {
+    height: 2em;
+    width: 22em;
+    font-size: 0.9em;
+    padding: 0.7em;
+  }
+
+  .marginFix {
+    margin-top: -1em;
+    margin-bottom: 2em;
+  }
+
+}
   
   

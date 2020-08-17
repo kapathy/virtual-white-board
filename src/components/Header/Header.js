@@ -29,7 +29,7 @@ export default function Header({ props, username }) {
             <div className="signoutContainer">
                 {clicked ? <button className="signout" onClick={handleSignOut}>Sign Out</button> : <div></div>}
             </div>
-            <h1>Virtual Whiteboard</h1>
+            <h1 className="name">Virtual Whiteboard</h1>
         </div>
     );
 }
