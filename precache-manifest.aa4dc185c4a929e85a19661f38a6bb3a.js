@@ -1,23 +1,23 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "0a3358fe2c78a5201dc5f6179ace91e7",
+    "revision": "e3d340eef277500bbb6addbc59764611",
     "url": "/virtual-white-board/index.html"
   },
   {
-    "revision": "8a0ee56db3abe0a4b9db",
-    "url": "/virtual-white-board/static/css/main.70a789fa.chunk.css"
+    "revision": "5548aadb8af916f14268",
+    "url": "/virtual-white-board/static/css/main.7f09e0a3.chunk.css"
   },
   {
-    "revision": "c3ee8891e902d8b79875",
-    "url": "/virtual-white-board/static/js/2.d329be43.chunk.js"
+    "revision": "0412bf0eb069ee1f91fd",
+    "url": "/virtual-white-board/static/js/2.cd0e1362.chunk.js"
   },
   {
     "revision": "4224b32d50aca7d0b4f248bf0384ed4f",
-    "url": "/virtual-white-board/static/js/2.d329be43.chunk.js.LICENSE.txt"
+    "url": "/virtual-white-board/static/js/2.cd0e1362.chunk.js.LICENSE.txt"
   },
   {
-    "revision": "8a0ee56db3abe0a4b9db",
-    "url": "/virtual-white-board/static/js/main.09bf0212.chunk.js"
+    "revision": "5548aadb8af916f14268",
+    "url": "/virtual-white-board/static/js/main.60defaf7.chunk.js"
   },
   {
     "revision": "fc9c0a2ee2bb69bc1ed3",
