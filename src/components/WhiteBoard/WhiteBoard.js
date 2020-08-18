@@ -103,8 +103,6 @@ function WhiteBoard(props) {
                 <Board
                     posts={posts}
                     handleDeletePost={handleDeletePost}
-                    username={user}
-                    color={color}
                 />
             </div>
         )

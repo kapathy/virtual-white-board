@@ -10,7 +10,7 @@ import Post from '../Post/Post';
 
 export default function Board({
     posts,
-    handleDeletePost,
+    handleDeletePost
 }) {
     return (
         <div className="board">

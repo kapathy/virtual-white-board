@@ -15,7 +15,7 @@
 
 .settingsIcon {
     width: 2em;
-    margin-left: -0.35em;
+    margin-left: -0.40em;
 }
 
 .dropdown-content {
@@ -37,6 +37,13 @@
 .dropdown:hover .dropdown-content {
     display: block;
     cursor: pointer;
+}
+
+ .dropdown-content div:hover {
+    -webkit-box-shadow:inset 0em 0em 0em 0.05em #606060;
+    -moz-box-shadow:inset 0em 0em 0em 0.05em #606060;
+    box-shadow:inset 0em 0em 0em 0.05em #606060;
+
 }
 
 .dropdown-content div:nth-child(1) { background: #c3ccd6; }
