@@ -25,63 +25,7 @@
   border: solid 0.2em #a3b2a5;
 }
   
-.typewriter {
-  margin-top: 8em;
-}
-  
-.cursor {
-  animation:1s blink step-end infinite
-}
-  
-@keyframes blink {
-	from,
-	to {
-		color: transparent
-	}
-	50% {
-		color: #000
-	}
-}
 
-@-moz-keyframes blink {
-	from,
-	to {
-		color: transparent
-	}
-	50% {
-		color: #000
-	}
-}
-
-@-webkit-keyframes blink {
-	from,
-	to {
-		color: transparent
-	}
-	50% {
-		color: #000
-	}
-}
-
-@-ms-keyframes blink {
-	from,
-	to {
-		color: transparent
-	}
-	50% {
-		color: #000
-	}
-}
-
-@-o-keyframes blink {
-	from,
-	to {
-		color: transparent
-	}
-	50% {
-		color: #000
-	}
-}  
 
 @media screen and (max-width: 500px) {
 	.homeOptions {
@@ -99,13 +43,5 @@
 		width: 8em;
 		margin: 0.5em auto 0.5em auto;
 	}
-
-	.typewriter {
-		margin-top: 4em;
-		font-size: 0.70em;
-		padding:  1em 0.3em 3em 0.3em;
-	  }
 	
-
-
   }
