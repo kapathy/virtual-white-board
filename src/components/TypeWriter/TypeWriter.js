@@ -1,6 +1,12 @@
 import React, { useState, useEffect } from 'react';
 import './TypeWriter.css';
 
+/**
+* Adds one character to content at a time, so that each character is typed with a delay.
+* Rendered in the {@link Home} component.
+* @param {String} text - Text to be typed
+*/
+
 const TypeWriter = ({ text }) => {
 
     const [{ content, start }, setContent] = useState({ content: '', start: 0 })

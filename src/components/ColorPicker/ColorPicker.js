@@ -2,10 +2,20 @@ import React, { useState } from 'react';
 import './ColorPicker.css';
 import SettingsIcon from '../../svgs/settings.svg';
 
+/**
+* Component that allows users to switch the color of a post to be posted.
+* @param props 
+*/
 
 function ColorPicker(props) {
 
     const [color, setColor] = useState("#a3b2a5");
+
+    /**
+    * When users has choosen a color this method will set the state in this component, 
+    * and return the same to the parent component.
+    * @param {string} color - The color that the user has selected.
+    */
 
     const changeColor = (color) => {
         setColor(color);

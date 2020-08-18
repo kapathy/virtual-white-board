@@ -13,6 +13,9 @@ var firebaseConfig = {
     measurementId: "G-CWBQGTRF8M"
 };
 
+/**
+* Firebase initialisation and methods.
+*/
 class Firebase {
     constructor() {
         App.initializeApp(firebaseConfig);
@@ -20,10 +23,23 @@ class Firebase {
         this.db = App.firestore();
     }
 
+    /**
+    * Method to sign in.
+    * @param {String} email 
+    * @param {String} password 
+    */
     signin(email, password) {
         return this.auth.signInWithEmailAndPassword(email, password);
     }
 
+    /**
+    * Method to sign in.
+    * @param {String} firstname 
+    * @param {String} lastname 
+    * @param {String} username 
+    * @param {String} email 
+    * @param {String} password 
+    */
     async signup(firstname, lastname, username, email, password) {
         await this.auth.createUserWithEmailAndPassword(email, password);
         return this.auth.currentUser.updateProfile({
@@ -31,18 +47,30 @@ class Firebase {
         });
     }
 
+    /**
+    * Method to sign out.
+    */
     signout() {
         return this.auth.signOut();
     }
 
+    /**
+    * Method that returns the user who is logged in.
+    */
     getUser() {
         return this.auth.currentUser();
     }
 
+    /**
+    * Method that updates when user changes.
+    */
     authChange(user) {
         return this.auth.onAuthStateChanged(user);
     }
 
+    /**
+    * Method to add a post to the database.
+    */
     addPost(date, value, user, color) {
         this.db.collection('posts').add({ date, value, user, color });
     }

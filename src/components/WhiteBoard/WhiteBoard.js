@@ -6,12 +6,22 @@ import Header from '../Header/Header';
 import firebase from '../../config/firebase'
 import ColorPicker from '../ColorPicker/ColorPicker';
 
+/**
+* Puts together the main compoents for the entire whiteboard screen.
+* Renderes the {@link Header}, {@link ColorPicker} and {@link Board} components.
+* @param props 
+*/
+
 function WhiteBoard(props) {
     const [posts, setPosts] = useState([]);
     const [value, setValue] = useState("");
-    const { currentUser } = useContext(AuthContext);
     const [color, setColor] = useState("#a3b2a5");
 
+    const { currentUser } = useContext(AuthContext);
+
+    /**
+    * Requests the posts data from the database.
+    */
     useEffect(() => {
         firebase.db.collection('posts').onSnapshot((snapshot) => {
             const newPosts = snapshot.docs.map((doc) => ({
@@ -22,6 +32,10 @@ function WhiteBoard(props) {
         })
     }, [])
 
+    /**
+    * Handles deletion of a post.
+    * @param {String} id - id (index) of the post to be deleted.
+    */
     const handleDeletePost = (id) => {
         const key = posts[id].id;
         console.log(key);
@@ -35,11 +49,18 @@ function WhiteBoard(props) {
         setPosts(newPosts);
     };
 
+    /**
+    * Receives the color of the post from child {@link ColorPicker} component. 
+    * @param {String} data - color code recieved.
+    */
     const getColor = (data) => {
         setColor(data);
-        console.log(data);
     };
 
+    /**
+    * Adds a post to the database.
+    * @param {String} text - message to be posted.
+    */
     const addPost = text => {
         const date = new Date().toLocaleString();
         firebase.addPost(date, text, currentUser.displayName, color);
@@ -47,6 +68,10 @@ function WhiteBoard(props) {
         setPosts(newPosts);
     };
 
+    /**
+    * Calls the addPost method to add the post and clears the input field. 
+    * @param {event} e - when user clicks button.
+    */
     const handleSubmit = e => {
         e.preventDefault();
         if (!value) return;
@@ -88,6 +113,5 @@ function WhiteBoard(props) {
         <div id="showMe">Sign In to use the whiteboard!</div>
     );
 }
-
 
 export default WhiteBoard;

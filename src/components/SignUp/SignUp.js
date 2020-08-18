@@ -2,6 +2,11 @@ import React, { useState } from 'react';
 import './SignUp.css';
 import firebase from '../../config/firebase'
 
+/**
+* Component responisble of rendering Sign Up form.
+* @param props
+*/
+
 function SignUp(props) {
     const [firstname, setFirstname] = useState("");
     const [lastname, setLastname] = useState("");
@@ -9,10 +14,20 @@ function SignUp(props) {
     const [email, setEmail] = useState("");
     const [password, setPassword] = useState("");
 
+    /**
+    * Handles sign up when user clicks button.
+    * @param {event} e - event fired when clicking button.
+    */
+
     const handleSignUp = e => {
         e.preventDefault();
         onSignUp();
     };
+
+    /**
+    * Handles sign up when user clicks button and pushes user to {@link WhiteBoard} component.
+    * @param {event} e - event fired when clicking button.
+    */
 
     async function onSignUp() {
         try {
