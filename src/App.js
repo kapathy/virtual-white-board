@@ -7,6 +7,7 @@ import Home from './components/Home/Home';
 import SignIn from './components/SignIn/SignIn';
 import SignUp from './components/SignUp/SignUp';
 
+
 /**
 * Contains the routes for the four main components.
 * Authentication Provider wraps the Routes.

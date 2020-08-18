@@ -3,7 +3,7 @@ import 'firebase/auth';
 import 'firebase/firebase-firestore'
 
 var firebaseConfig = {
-    apiKey: "AIzaSyAGD3by0y8wzxSwcM5HeoJcy-WBWy3W6co",
+    apiKey: process.env.REACT_APP_API_KEY,
     authDomain: "virtual-white-board.firebaseapp.com",
     databaseURL: "https://virtual-white-board.firebaseio.com",
     projectId: "virtual-white-board",
