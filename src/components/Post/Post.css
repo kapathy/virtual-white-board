@@ -1,10 +1,8 @@
 .post {
-    flex: 1 1 auto;
     text-align: center;
     min-width: 15em;
-    max-width: 20em;
+    max-width: 31em;
     min-height: 8em;
-    height: min-content;
     margin: 0.5em;
     background-color: #a3b2a5;
     border-radius: 0.5em;
