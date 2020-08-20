@@ -11,6 +11,7 @@ const TypeWriter = ({ text }) => {
 
     const [{ content, start }, setContent] = useState({ content: '', start: 0 })
 
+    // because [content] is put as second paramter, this works as a component did update
     useEffect(() => {
         if (start === text.length) return
         const delay = setTimeout(() => {

@@ -29,7 +29,7 @@ export default function Header({ props, username }) {
     * When clicked is true sign out button is displayed.
     */
     const handleClick = () => {
-        { clicked ? setClicked(false) : setClicked(true) }
+        clicked ? setClicked(false) : setClicked(true)
     }
 
     return (
@@ -39,7 +39,7 @@ export default function Header({ props, username }) {
                 <img className="usericon" src={UserIcon} alt="User Icon" />
             </div>
             <div className="signoutContainer">
-                {clicked ? <button className="signout" onClick={handleSignOut}>Sign Out</button> : <div></div>}
+                {clicked && <button className="signout" onClick={handleSignOut}>Sign Out</button>}
             </div>
             <h1 className="name">Virtual Whiteboard</h1>
         </div>
